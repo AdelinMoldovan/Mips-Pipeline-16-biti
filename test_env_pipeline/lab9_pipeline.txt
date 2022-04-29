@@ -1,0 +1,47 @@
+ETAJUL1(IF/ID)
+
+        PC+1: 15 DOWNTO 0
+        INSTRUCTION: 15 DOWNTO 0 =>32 biti
+
+ETAJUL2(ID/EX)
+	MemToReg: 1
+	RegWrite: 1 
+	MemWrite: 1 
+	Branch: 1 DOWNTO 0
+	AluOp: 1/2 DOWNTO 0
+	AluSrc: 1 
+	RegDst: 1
+	PC+1: 15 DOWNTO 0
+        RD1: 15 DOWNTO 0
+        RD2: 15 DOWNTO 0 
+        EXT_IMM: 15 DOWNTO 0
+        FUNC: 2 DOWNTO 0 
+        SA: 1 
+	
+	MUX in ID: WA: 2 DOWNTO 0 =>79+ biti
+	MUX in EX: rt: 2 DOWNTO 0 ]
+		   rd: 2 DOWNTO 0 ] =>82+ biti
+		
+ETAJUL3(EX/MEM)
+	MemToReg: 1
+	RegWrite: 1 
+	MemWrite: 1
+	Brach: 1 
+	BranchAddress:15 DOWNTO 0
+	Zero: 1 
+	ALURES:15 DOWNTO 0
+	RD2:15 DOWNTO 0
+	WA:2 DOWNTO 0  => 56+ biti
+	
+ETAJUL4(MEM/WB)
+	MEM/WB: 1
+	MemToReg: 1
+	RegWrite: 1
+	RD: 15 DOWNTO 0
+	AluRes: 15 DOWNTO 0
+	WA: 2 DOWNTO 0 =>37 biti
+	
+	
+	
+     
+     
